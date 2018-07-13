@@ -18,7 +18,6 @@ protocol APIClient: class {
 }
 
 extension APIClient {
-    typealias JSON = [String: AnyObject]
     typealias JSONTaskCompletionHandler = (Data?, APIError?) -> Void
     
     func jsonTask(with request: URLRequest, completionHandler completion: @escaping JSONTaskCompletionHandler) -> URLSessionDataTask {
