@@ -42,6 +42,8 @@ class Order: Decodable {
     var billingAddress: BillingAddress!
     var shippingAddress: ShippingAddress!
     
+    var lineItems: [LineItem]?
+    
     var orderStatusURL: String!
     
     enum CodingKeys: String, CodingKey {
@@ -71,6 +73,7 @@ class Order: Decodable {
         case userID = "user_id"
         case billingAddress = "billing_address"
         case shippingAddress = "shipping_address"
+        case lineItems = "line_items"
         case orderStatusURL = "order_status_url"
     }
 }
