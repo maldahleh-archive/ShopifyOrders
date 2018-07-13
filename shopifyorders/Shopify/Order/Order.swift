@@ -39,6 +39,7 @@ class Order: Decodable {
     
     var name: String!
     var userID: Int!
+    var customer: Customer!
     var billingAddress: Address!
     var shippingAddress: Address!
     
