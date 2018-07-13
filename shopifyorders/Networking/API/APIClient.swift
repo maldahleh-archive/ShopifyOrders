@@ -9,7 +9,7 @@
 import Foundation
 
 protocol APIClient: class {
-    static var apiKey: String { get }
+    static var accessToken: String { get }
     
     var session: URLSession { get }
     var jsonDecoder: JSONDecoder { get }

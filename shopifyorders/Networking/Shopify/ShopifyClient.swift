@@ -9,7 +9,7 @@
 import Foundation
 
 class ShopifyClient: APIClient {
-    static let apiKey = "c32313df0d0ef512ca64d5b336a0d7c6"
+    static let accessToken = "c32313df0d0ef512ca64d5b336a0d7c6"
     
     let session = URLSession(configuration: .default)
     let jsonDecoder = JSONDecoder()

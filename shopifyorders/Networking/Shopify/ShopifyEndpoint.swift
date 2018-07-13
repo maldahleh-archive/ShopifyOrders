@@ -28,7 +28,7 @@ extension Shopify: Endpoint {
         case .orders(let page):
             return [
                 URLQueryItem(name: "page", value: "\(page)"),
-                URLQueryItem(name: "access_token", value: ShopifyClient.apiKey)
+                URLQueryItem(name: "access_token", value: ShopifyClient.accessToken)
             ]
         }
     }
