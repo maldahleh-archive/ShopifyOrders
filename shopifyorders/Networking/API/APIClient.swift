@@ -14,10 +14,11 @@ protocol APIClient: class {
     var session: URLSession { get }
     var jsonDecoder: JSONDecoder { get }
     
-    func fetchWith<T: Decodable>(_ request: URLRequest, decode: T.Type, completion: @escaping (Result<T, APIError>) -> Void)
+    func fetchWith<T: Decodable>(_ request: URLRequest, decode: T.Type, completion: @escaping FetchTaskCompletionHandler<T>)
 }
 
 extension APIClient {
+    typealias FetchTaskCompletionHandler<T: Decodable> = (Result<T, APIError>) -> Void
     typealias JSONTaskCompletionHandler = (Data?, APIError?) -> Void
     
     func jsonTask(with request: URLRequest, completionHandler completion: @escaping JSONTaskCompletionHandler) -> URLSessionDataTask {
@@ -43,7 +44,7 @@ extension APIClient {
         return task
     }
     
-    func fetchWith<T: Decodable>(_ request: URLRequest, decode: T.Type, completion: @escaping (Result<T, APIError>) -> Void) {
+    func fetchWith<T: Decodable>(_ request: URLRequest, decode: T.Type, completion: @escaping FetchTaskCompletionHandler<T>) {
         jsonTask(with: request) { [weak self] json, error in
             DispatchQueue.main.async {
                 guard let json = json else {
