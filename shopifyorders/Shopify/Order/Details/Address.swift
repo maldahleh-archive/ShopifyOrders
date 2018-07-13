@@ -6,7 +6,7 @@
 //  Copyright © 2018 Mohammed Al-Dahleh. All rights reserved.
 //
 
-class BillingAddress: Decodable {
+class Address: Decodable {
     var name: String!
     var firstName: String!
     var lastName: String!
