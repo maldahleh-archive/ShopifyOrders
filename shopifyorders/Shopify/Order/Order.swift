@@ -12,13 +12,13 @@ class Order: Decodable {
     var id: Int!
     var email: String!
     var number: Int!
+    var orderNumber: Int!
     var test: Bool!
     
+    var processedAt: String?
     var createdAt: String?
     var updatedAt: String?
     var closedAt: String?
-    
-    var note: String?
     
     var token: String?
     var gateway: String?
@@ -37,15 +37,23 @@ class Order: Decodable {
     
     var totalWeight: Int!
     
+    var name: String!
+    var userID: Int!
+    var billingAddress: BillingAddress!
+    var shippingAddress: ShippingAddress!
+    
+    var orderStatusURL: String!
+    
     enum CodingKeys: String, CodingKey {
         case id
         case email
         case number
+        case orderNumber = "order_number"
         case test
+        case processedAt = "processed_at"
         case createdAt = "created_at"
         case updatedAt = "updated_at"
         case closedAt = "closed_at"
-        case note
         case token
         case gateway
         case financialStatus = "financial_status"
@@ -59,5 +67,10 @@ class Order: Decodable {
         case taxesIncluded = "taxes_included"
         case totalTax = "total_tax"
         case totalWeight = "total_weight"
+        case name
+        case userID = "user_id"
+        case billingAddress = "billing_address"
+        case shippingAddress = "shipping_address"
+        case orderStatusURL = "order_status_url"
     }
 }
