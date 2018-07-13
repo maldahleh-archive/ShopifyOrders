@@ -10,7 +10,6 @@
 		4ABE357420F45E3200F3D3EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ABE357320F45E3200F3D3EA /* AppDelegate.swift */; };
 		4ABE357620F45E3200F3D3EA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ABE357520F45E3200F3D3EA /* ViewController.swift */; };
 		4ABE357920F45E3200F3D3EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4ABE357720F45E3200F3D3EA /* Main.storyboard */; };
-		4ABE357C20F45E3200F3D3EA /* shopifyorders.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4ABE357A20F45E3200F3D3EA /* shopifyorders.xcdatamodeld */; };
 		4ABE357E20F45E3600F3D3EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4ABE357D20F45E3600F3D3EA /* Assets.xcassets */; };
 		4ABE358120F45E3600F3D3EA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4ABE357F20F45E3600F3D3EA /* LaunchScreen.storyboard */; };
 		4AEB47EE20F93F9E0039FC07 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEB47ED20F93F9E0039FC07 /* APIError.swift */; };
@@ -27,7 +26,6 @@
 		4ABE357320F45E3200F3D3EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4ABE357520F45E3200F3D3EA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4ABE357820F45E3200F3D3EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		4ABE357B20F45E3200F3D3EA /* shopifyorders.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = shopifyorders.xcdatamodel; sourceTree = "<group>"; };
 		4ABE357D20F45E3600F3D3EA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4ABE358020F45E3600F3D3EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4ABE358220F45E3600F3D3EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -70,15 +68,14 @@
 		4ABE357220F45E3200F3D3EA /* shopifyorders */ = {
 			isa = PBXGroup;
 			children = (
+				4ABE357D20F45E3600F3D3EA /* Assets.xcassets */,
 				4AEB47FB20F94B390039FC07 /* Models */,
 				4AEB47EB20F93F8A0039FC07 /* Networking */,
 				4ABE357320F45E3200F3D3EA /* AppDelegate.swift */,
 				4ABE357520F45E3200F3D3EA /* ViewController.swift */,
 				4ABE357720F45E3200F3D3EA /* Main.storyboard */,
-				4ABE357D20F45E3600F3D3EA /* Assets.xcassets */,
 				4ABE357F20F45E3600F3D3EA /* LaunchScreen.storyboard */,
 				4ABE358220F45E3600F3D3EA /* Info.plist */,
-				4ABE357A20F45E3200F3D3EA /* shopifyorders.xcdatamodeld */,
 			);
 			path = shopifyorders;
 			sourceTree = "<group>";
@@ -206,7 +203,6 @@
 				4AEB47FD20F94B440039FC07 /* Orders.swift in Sources */,
 				4AEB47EE20F93F9E0039FC07 /* APIError.swift in Sources */,
 				4ABE357420F45E3200F3D3EA /* AppDelegate.swift in Sources */,
-				4ABE357C20F45E3200F3D3EA /* shopifyorders.xcdatamodeld in Sources */,
 				4AEB47F220F93FF30039FC07 /* APIClient.swift in Sources */,
 				4AEB47FA20F942130039FC07 /* ShopifyClient.swift in Sources */,
 			);
@@ -406,19 +402,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		4ABE357A20F45E3200F3D3EA /* shopifyorders.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				4ABE357B20F45E3200F3D3EA /* shopifyorders.xcdatamodel */,
-			);
-			currentVersion = 4ABE357B20F45E3200F3D3EA /* shopifyorders.xcdatamodel */;
-			path = shopifyorders.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 4ABE356820F45E3200F3D3EA /* Project object */;
 }
