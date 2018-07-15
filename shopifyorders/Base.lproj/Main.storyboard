@@ -19,10 +19,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="d5y-P6-2eM" userLabel="ViewStack">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="8" y="20" width="359" height="639"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Order Summary" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SVl-Je-mY7">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="41"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="359" height="41"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="41" id="1KB-Ec-6Sg"/>
                                         </constraints>
@@ -31,7 +31,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Updating..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vDy-x3-N7R" userLabel="UpdateLabel">
-                                        <rect key="frame" x="0.0" y="41" width="375" height="15"/>
+                                        <rect key="frame" x="0.0" y="41" width="359" height="15"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="15" id="Xsb-Qy-gxz"/>
                                         </constraints>
@@ -40,13 +40,13 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="7AD-gd-kGa" userLabel="DataStack">
-                                        <rect key="frame" x="0.0" y="56" width="375" height="591"/>
+                                        <rect key="frame" x="0.0" y="56" width="359" height="583"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Tgi-E7-XaC" userLabel="ProvinceStack">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="294"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="359" height="290"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Orders by Province" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hoR-1q-al4" userLabel="ProvinceOrders">
-                                                        <rect key="frame" x="0.0" y="0.0" width="375" height="20.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="359" height="20.5"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="20.5" id="KaD-YK-Mnb"/>
                                                         </constraints>
@@ -55,16 +55,16 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="V40-t5-e1b" userLabel="ProvinceOrdersTable">
-                                                        <rect key="frame" x="0.0" y="20.5" width="375" height="273.5"/>
+                                                        <rect key="frame" x="0.0" y="20.5" width="359" height="269.5"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </tableView>
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="qDh-Nu-TMb" userLabel="YearStack">
-                                                <rect key="frame" x="0.0" y="297" width="375" height="294"/>
+                                                <rect key="frame" x="0.0" y="293" width="359" height="290"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Orders by Year" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U0A-qu-wbg" userLabel="YearOrders">
-                                                        <rect key="frame" x="0.0" y="0.0" width="375" height="20.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="359" height="20.5"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="20.5" id="4Uu-Xv-3WO"/>
                                                         </constraints>
@@ -73,7 +73,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="FJW-qJ-YxZ" userLabel="YearOrdersTable">
-                                                        <rect key="frame" x="0.0" y="20.5" width="375" height="273.5"/>
+                                                        <rect key="frame" x="0.0" y="20.5" width="359" height="269.5"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </tableView>
                                                 </subviews>
@@ -86,9 +86,9 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="d5y-P6-2eM" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="7Rv-43-FzR"/>
-                            <constraint firstAttribute="bottom" secondItem="d5y-P6-2eM" secondAttribute="bottom" id="V0K-Js-yf0"/>
-                            <constraint firstItem="d5y-P6-2eM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ZFn-aO-GSq"/>
-                            <constraint firstAttribute="trailing" secondItem="d5y-P6-2eM" secondAttribute="trailing" id="z7n-KK-dKS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="d5y-P6-2eM" secondAttribute="bottom" constant="8" id="V0K-Js-yf0"/>
+                            <constraint firstItem="d5y-P6-2eM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="ZFn-aO-GSq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="d5y-P6-2eM" secondAttribute="trailing" constant="8" id="z7n-KK-dKS"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
