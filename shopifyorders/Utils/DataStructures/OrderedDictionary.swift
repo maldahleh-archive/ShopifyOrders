@@ -43,6 +43,10 @@ extension OrderedDictionary {
         return values[keys[index]]
     }
     
+    func elementAt(index: Int, subindex: Int) -> E? {
+        return valueAt(index: index)?[subindex]
+    }
+    
     func totalKeys() -> Int {
         return keys.count
     }
