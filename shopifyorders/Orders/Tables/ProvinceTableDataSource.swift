@@ -11,7 +11,7 @@ import UIKit
 class ProvinceTableDataSource: NSObject {
     private static let ProvinceCellIdentifier = "ProvinceCell"
     
-    private var provinceOrders: OrderedDictionary<String, Order> = OrderedDictionary()
+    private var provinceOrders: OrderedDictionary<String, Order> = OrderedDictionary(inIncreasingOrder: true)
     
     func addOrder(_ order: Order, withProvince province: String) {
         provinceOrders.insert(order, forKey: province)

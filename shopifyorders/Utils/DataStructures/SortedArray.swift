@@ -18,6 +18,14 @@ public struct SortedArray<Element> where Element: Comparable {
         self.init(inIncreasingOrder: <)
     }
     
+    public init(inIncreasingOrder: Bool) {
+        if inIncreasingOrder {
+            self.init(inIncreasingOrder: <)
+        } else {
+            self.init(inIncreasingOrder: >)
+        }
+    }
+    
     public init(inIncreasingOrder: @escaping Comparator<Element>) {
         self._elements = []
         self.inIncreasingOrder = inIncreasingOrder

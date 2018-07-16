@@ -11,7 +11,7 @@ import UIKit
 class YearTableDataSource: NSObject {
     private static let YearCellIdentifier = "YearCell"
     
-    private var yearOrders: OrderedDictionary<Int, Order> = OrderedDictionary()
+    private var yearOrders: OrderedDictionary<Int, Order> = OrderedDictionary(inIncreasingOrder: false)
     
     func addOrder(_ order: Order, withYear year: Int) {
         yearOrders.insert(order, forKey: year)

@@ -9,8 +9,12 @@
 import Foundation
 
 struct OrderedDictionary<K: Hashable & Comparable, E> {
-    var keys: SortedArray<K> = SortedArray()
+    var keys: SortedArray<K>
     var values: Dictionary<K, [E]> = [:]
+    
+    public init(inIncreasingOrder: Bool) {
+        self.keys = SortedArray(inIncreasingOrder: inIncreasingOrder)
+    }
     
     subscript(key: K) -> [E]? {
         get {
