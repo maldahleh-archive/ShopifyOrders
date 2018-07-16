@@ -44,15 +44,15 @@ extension ViewController {
     }
     
     private func downloadDataFor(page: Int, completion: @escaping DataCompletionHandler) {
-        shopifyClient.ordersWith(page: page) { [weak self] result in
+        shopifyClient.ordersWith(page: page) { [unowned self] result in
             switch result {
             case .failure(let error):
-                AlertUtils.presentAlertWith(viewController: self!, message: "An error occurred, please try again later.\nError: \(error.description)")
+                AlertUtils.presentAlertWith(viewController: self, message: "An error occurred, please try again later.\nError: \(error.description)")
                 completion()
             case .success(let downloaded):
                 if !downloaded.orders.isEmpty {
-                    self?.downloadedOrders.addOrders(downloaded.orders)
-                    self?.downloadDataFor(page: page + 1, completion: completion)
+                    self.downloadedOrders.addOrders(downloaded.orders)
+                    self.downloadDataFor(page: page + 1, completion: completion)
                 } else {
                     completion()
                 }
