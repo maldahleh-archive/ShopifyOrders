@@ -9,8 +9,8 @@
 import Foundation
 
 struct OrderedDictionary<K: Hashable & Comparable, E> {
-    var keys: SortedArray<K>
-    var values: Dictionary<K, [E]> = [:]
+    fileprivate var keys: SortedArray<K>
+    fileprivate var values: Dictionary<K, [E]> = [:]
     
     public init(inIncreasingOrder: Bool) {
         self.keys = SortedArray(inIncreasingOrder: inIncreasingOrder)
@@ -25,10 +25,6 @@ struct OrderedDictionary<K: Hashable & Comparable, E> {
 
 // MARK: - Helper methods
 extension OrderedDictionary {
-    func keyAt(index: Int) -> K {
-        return keys[index]
-    }
-    
     mutating func insert(_ element: E, forKey key: K) {
         if keys.contains(key) {
             values[key]!.append(element)
@@ -39,7 +35,15 @@ extension OrderedDictionary {
         keys.insert(key)
     }
     
+    func keyAt(index: Int) -> K {
+        return keys[index]
+    }
+    
     func valueAt(index: Int) -> [E]? {
         return values[keys[index]]
+    }
+    
+    func totalKeys() -> Int {
+        return keys.count
     }
 }
