@@ -28,8 +28,9 @@ extension ProvinceTableDataSource: UITableViewDataSource {
         guard let orders = provinceOrders.valueAt(index: indexPath.row) else { return UITableViewCell() }
         
         let cell = tableView.dequeueReusableCell(withIdentifier: ProvinceTableDataSource.ProvinceCellIdentifier, for: indexPath)
-        cell.textLabel?.text = provinceOrders.keyAt(index: indexPath.row)
-        cell.detailTextLabel?.text = String(orders.count)
+        guard let mainLabel = cell.textLabel, let detailLabel = cell.detailTextLabel else { return UITableViewCell() }
+        mainLabel.text = provinceOrders.keyAt(index: indexPath.row)
+        detailLabel.text = String(orders.count)
         
         return cell
     }
