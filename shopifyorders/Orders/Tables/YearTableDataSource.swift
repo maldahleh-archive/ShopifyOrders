@@ -35,7 +35,9 @@ extension YearTableDataSource: UITableViewDataSource {
     
     // Mark: - Display Methods
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return String(yearOrders.keyAt(index: section))
+        guard let orders = yearOrders.valueAt(index: section) else { return nil }
+        
+        return "\(yearOrders.keyAt(index: section)) (Total: \(orders.count))"
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
