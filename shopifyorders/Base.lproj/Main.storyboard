@@ -100,7 +100,7 @@
                                                     </label>
                                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="FJW-qJ-YxZ" userLabel="YearOrdersTable">
                                                         <rect key="frame" x="0.0" y="20.5" width="359" height="277"/>
-                                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <prototypes>
                                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="YearCell" textLabel="6Qe-5z-gRQ" detailTextLabel="iPJ-qi-CK0" style="IBUITableViewCellStyleValue1" id="n25-ph-9kz">
                                                                 <rect key="frame" x="0.0" y="55.5" width="359" height="44"/>
