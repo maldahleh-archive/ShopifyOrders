@@ -22,6 +22,13 @@ class ProvincesViewController: UIViewController {
     }
 }
 
+// MARK: - Navigation
+extension ProvincesViewController {
+    @IBAction func dismissButtonTapped(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+}
+
 // MARK: - UITableViewDataSource
 extension ProvincesViewController: UITableViewDataSource {
     // MARK: - Count methods
