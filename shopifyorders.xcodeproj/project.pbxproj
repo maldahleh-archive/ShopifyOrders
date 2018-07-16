@@ -13,6 +13,9 @@
 		4ABE357E20F45E3600F3D3EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4ABE357D20F45E3600F3D3EA /* Assets.xcassets */; };
 		4ABE358120F45E3600F3D3EA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4ABE357F20F45E3600F3D3EA /* LaunchScreen.storyboard */; };
 		4AE3A61E20FBFAE700D14CC8 /* DownloadedOrders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE3A61D20FBFAE700D14CC8 /* DownloadedOrders.swift */; };
+		4AE3A62220FC09EF00D14CC8 /* ProvinceTableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE3A62120FC09EF00D14CC8 /* ProvinceTableDataSource.swift */; };
+		4AE3A62520FC20AB00D14CC8 /* OrderedDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE3A62420FC20AB00D14CC8 /* OrderedDictionary.swift */; };
+		4AE3A62820FC232F00D14CC8 /* SortedArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE3A62720FC232F00D14CC8 /* SortedArray.swift */; };
 		4AEB47EE20F93F9E0039FC07 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEB47ED20F93F9E0039FC07 /* APIError.swift */; };
 		4AEB47F020F93FBC0039FC07 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEB47EF20F93FBC0039FC07 /* Result.swift */; };
 		4AEB47F220F93FF30039FC07 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEB47F120F93FF30039FC07 /* APIClient.swift */; };
@@ -35,6 +38,9 @@
 		4ABE358020F45E3600F3D3EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4ABE358220F45E3600F3D3EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4AE3A61D20FBFAE700D14CC8 /* DownloadedOrders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadedOrders.swift; sourceTree = "<group>"; };
+		4AE3A62120FC09EF00D14CC8 /* ProvinceTableDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProvinceTableDataSource.swift; sourceTree = "<group>"; };
+		4AE3A62420FC20AB00D14CC8 /* OrderedDictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderedDictionary.swift; sourceTree = "<group>"; };
+		4AE3A62720FC232F00D14CC8 /* SortedArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortedArray.swift; sourceTree = "<group>"; };
 		4AEB47ED20F93F9E0039FC07 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		4AEB47EF20F93FBC0039FC07 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		4AEB47F120F93FF30039FC07 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
@@ -82,6 +88,7 @@
 				4AEB47FE20F95B810039FC07 /* Shopify */,
 				4AEB47EB20F93F8A0039FC07 /* Networking */,
 				4AE3A61B20FBED6100D14CC8 /* Orders */,
+				4AE3A62320FC209600D14CC8 /* Utils */,
 				4ABE357320F45E3200F3D3EA /* AppDelegate.swift */,
 				4ABE357720F45E3200F3D3EA /* Main.storyboard */,
 				4ABE357F20F45E3600F3D3EA /* LaunchScreen.storyboard */,
@@ -94,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				4AE3A61C20FBFA7D00D14CC8 /* Models */,
+				4AE3A61F20FC09C600D14CC8 /* Tables */,
 				4ABE357520F45E3200F3D3EA /* ViewController.swift */,
 			);
 			path = Orders;
@@ -105,6 +113,39 @@
 				4AE3A61D20FBFAE700D14CC8 /* DownloadedOrders.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		4AE3A61F20FC09C600D14CC8 /* Tables */ = {
+			isa = PBXGroup;
+			children = (
+				4AE3A62020FC09DD00D14CC8 /* Provinces */,
+			);
+			path = Tables;
+			sourceTree = "<group>";
+		};
+		4AE3A62020FC09DD00D14CC8 /* Provinces */ = {
+			isa = PBXGroup;
+			children = (
+				4AE3A62120FC09EF00D14CC8 /* ProvinceTableDataSource.swift */,
+			);
+			path = Provinces;
+			sourceTree = "<group>";
+		};
+		4AE3A62320FC209600D14CC8 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				4AE3A62620FC231F00D14CC8 /* DataStructures */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		4AE3A62620FC231F00D14CC8 /* DataStructures */ = {
+			isa = PBXGroup;
+			children = (
+				4AE3A62420FC20AB00D14CC8 /* OrderedDictionary.swift */,
+				4AE3A62720FC232F00D14CC8 /* SortedArray.swift */,
+			);
+			path = DataStructures;
 			sourceTree = "<group>";
 		};
 		4AEB47EB20F93F8A0039FC07 /* Networking */ = {
@@ -245,8 +286,10 @@
 			files = (
 				4AEB480B20F96BE60039FC07 /* LineItem.swift in Sources */,
 				4AEB47F520F940400039FC07 /* Endpoint.swift in Sources */,
+				4AE3A62820FC232F00D14CC8 /* SortedArray.swift in Sources */,
 				4ABE357620F45E3200F3D3EA /* ViewController.swift in Sources */,
 				4AEB480320F95BC40039FC07 /* Order.swift in Sources */,
+				4AE3A62220FC09EF00D14CC8 /* ProvinceTableDataSource.swift in Sources */,
 				4AEB47F020F93FBC0039FC07 /* Result.swift in Sources */,
 				4AEB47F820F940940039FC07 /* ShopifyEndpoint.swift in Sources */,
 				4AEB480020F95B940039FC07 /* Orders.swift in Sources */,
@@ -255,6 +298,7 @@
 				4ABE357420F45E3200F3D3EA /* AppDelegate.swift in Sources */,
 				4AEB480D20F96DD00039FC07 /* Customer.swift in Sources */,
 				4AEB47F220F93FF30039FC07 /* APIClient.swift in Sources */,
+				4AE3A62520FC20AB00D14CC8 /* OrderedDictionary.swift in Sources */,
 				4AEB47FA20F942130039FC07 /* ShopifyClient.swift in Sources */,
 				4AEB480620F969280039FC07 /* Address.swift in Sources */,
 			);

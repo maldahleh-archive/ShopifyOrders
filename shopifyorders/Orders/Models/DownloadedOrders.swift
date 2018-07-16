@@ -7,8 +7,12 @@
 //
 
 class DownloadedOrders {
-    var provinceOrders: [String: [Order]] = [:]
+    let provinceDataSource: ProvinceTableDataSource
     var yearOrders: [Int: [Order]] = [:]
+    
+    init(provinceDataSource: ProvinceTableDataSource) {
+        self.provinceDataSource = provinceDataSource
+    }
     
     func addOrders(_ orders: [Order]) {
         for order in orders {
@@ -16,13 +20,8 @@ class DownloadedOrders {
             guard let address = order.billingAddress, let province = address.province else { continue }
             guard let orderCreated = order.createdAt, let orderYear = Int(orderCreated.prefix(4)) else { continue }
             
-            if provinceOrders.keys.contains(province) {
-                provinceOrders[province]!.append(order)
-                yearOrders[orderYear]!.append(order)
-            } else {
-                provinceOrders[province] = [order]
-                yearOrders[orderYear] = [order]
-            }
+            provinceDataSource.addOrder(order, withProvince: province)
+            // MARK: Year
         }
     }
 }
