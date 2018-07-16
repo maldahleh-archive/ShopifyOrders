@@ -36,6 +36,8 @@ extension ProvincesViewController: UITableViewDataSource {
     }
     
     // MARK: - Display methods
+    private static let CellIdentifier = "OrderCell"
+    
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         guard let ordersForIndex = provinceOrders.valueAt(index: section) else { return nil }
         
@@ -43,6 +45,11 @@ extension ProvincesViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: ProvincesViewController.CellIdentifier, for: indexPath)
+        guard let order = provinceOrders.elementAt(index: indexPath.section, subindex: indexPath.row),
+            let textLabel = cell.detailTextLabel else { return UITableViewCell() }
+        
+        textLabel.text = String(order.orderNumber)
+        return cell
     }
 }
