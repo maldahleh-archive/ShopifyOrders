@@ -21,7 +21,7 @@ class ProvinceTableDataSource: NSObject {
 // MARK: - UITableViewDataSource
 extension ProvinceTableDataSource: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return provinceOrders.keys.count
+        return provinceOrders.totalKeys()
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
