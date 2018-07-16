@@ -20,6 +20,7 @@
 		4AE3A62D20FC4F4000D14CC8 /* YearCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE3A62C20FC4F4000D14CC8 /* YearCell.swift */; };
 		4AE3A63020FC539D00D14CC8 /* AlertUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE3A62F20FC539D00D14CC8 /* AlertUtils.swift */; };
 		4AE3A63420FC66E800D14CC8 /* ProvincesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE3A63320FC66E800D14CC8 /* ProvincesViewController.swift */; };
+		4AE3A63720FC735300D14CC8 /* ProvincesDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE3A63620FC735300D14CC8 /* ProvincesDataSource.swift */; };
 		4AEB47EE20F93F9E0039FC07 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEB47ED20F93F9E0039FC07 /* APIError.swift */; };
 		4AEB47F020F93FBC0039FC07 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEB47EF20F93FBC0039FC07 /* Result.swift */; };
 		4AEB47F220F93FF30039FC07 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEB47F120F93FF30039FC07 /* APIClient.swift */; };
@@ -49,6 +50,7 @@
 		4AE3A62C20FC4F4000D14CC8 /* YearCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YearCell.swift; sourceTree = "<group>"; };
 		4AE3A62F20FC539D00D14CC8 /* AlertUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertUtils.swift; sourceTree = "<group>"; };
 		4AE3A63320FC66E800D14CC8 /* ProvincesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProvincesViewController.swift; sourceTree = "<group>"; };
+		4AE3A63620FC735300D14CC8 /* ProvincesDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProvincesDataSource.swift; sourceTree = "<group>"; };
 		4AEB47ED20F93F9E0039FC07 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		4AEB47EF20F93FBC0039FC07 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		4AEB47F120F93FF30039FC07 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
@@ -171,9 +173,18 @@
 		4AE3A63220FC66C200D14CC8 /* Provinces */ = {
 			isa = PBXGroup;
 			children = (
+				4AE3A63520FC734000D14CC8 /* DataSource */,
 				4AE3A63320FC66E800D14CC8 /* ProvincesViewController.swift */,
 			);
 			path = Provinces;
+			sourceTree = "<group>";
+		};
+		4AE3A63520FC734000D14CC8 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				4AE3A63620FC735300D14CC8 /* ProvincesDataSource.swift */,
+			);
+			path = DataSource;
 			sourceTree = "<group>";
 		};
 		4AEB47EB20F93F8A0039FC07 /* Networking */ = {
@@ -332,6 +343,7 @@
 				4AE3A62A20FC330000D14CC8 /* YearTableDataSource.swift in Sources */,
 				4AE3A62520FC20AB00D14CC8 /* OrderedDictionary.swift in Sources */,
 				4AEB47FA20F942130039FC07 /* ShopifyClient.swift in Sources */,
+				4AE3A63720FC735300D14CC8 /* ProvincesDataSource.swift in Sources */,
 				4AEB480620F969280039FC07 /* Address.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
