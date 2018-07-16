@@ -26,6 +26,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.provinceTable.dataSource = provinceDataSource
+        self.yearTable.dataSource = yearDataSource
         
         updateData()
     }
