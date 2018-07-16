@@ -60,3 +60,22 @@ extension ViewController {
         }
     }
 }
+
+// MARK: - Navigation
+extension ViewController {
+    private static let ProvinceSegue = "toProvinces"
+    
+    @IBAction func provinceButtonTapped(_ sender: Any) {
+        // Prevent user navigation while data is downloading
+        if !updatingLabel.isHidden { return }
+        
+        performSegue(withIdentifier: ViewController.ProvinceSegue, sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier != ViewController.ProvinceSegue { return }
+        guard let destinationVC = segue.destination as? ProvincesViewController else { return }
+        
+        destinationVC.provinceOrders = provinceDataSource.provinceOrders
+    }
+}

@@ -53,7 +53,7 @@
                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                         <state key="normal" title="Orders by Province"/>
                                                         <connections>
-                                                            <segue destination="0FI-ty-gng" kind="show" identifier="toProvinces" id="QFy-r5-5n9"/>
+                                                            <action selector="provinceButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="z6O-dG-wLS"/>
                                                         </connections>
                                                     </button>
                                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="V40-t5-e1b" userLabel="ProvinceOrdersTable">
@@ -221,6 +221,7 @@
                         <outlet property="provinceTable" destination="V40-t5-e1b" id="K8a-rn-eeu"/>
                         <outlet property="updatingLabel" destination="vDy-x3-N7R" id="Zx9-hL-Esg"/>
                         <outlet property="yearTable" destination="FJW-qJ-YxZ" id="fhB-wR-fJ6"/>
+                        <segue destination="0FI-ty-gng" kind="presentation" identifier="toProvinces" id="viN-Jo-xkk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -270,6 +271,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="eJ8-a7-28V"/>
                     </view>
+                    <connections>
+                        <outlet property="provinceTable" destination="gPY-gI-y0Y" id="VSq-HE-YPM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nc5-P1-Pqw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
