@@ -47,7 +47,8 @@ extension ViewController {
         shopifyClient.ordersWith(page: page) { [weak self] result in
             switch result {
             case .failure(let error):
-                print("Error \(error.localizedDescription)")
+                AlertUtils.presentAlertWith(viewController: self!, message: "An error occurred, please try again later.\nError: \(error.description)")
+                completion()
             case .success(let downloaded):
                 if !downloaded.orders.isEmpty {
                     self?.downloadedOrders.addOrders(downloaded.orders)
