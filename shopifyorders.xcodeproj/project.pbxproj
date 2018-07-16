@@ -16,6 +16,7 @@
 		4AE3A62220FC09EF00D14CC8 /* ProvinceTableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE3A62120FC09EF00D14CC8 /* ProvinceTableDataSource.swift */; };
 		4AE3A62520FC20AB00D14CC8 /* OrderedDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE3A62420FC20AB00D14CC8 /* OrderedDictionary.swift */; };
 		4AE3A62820FC232F00D14CC8 /* SortedArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE3A62720FC232F00D14CC8 /* SortedArray.swift */; };
+		4AE3A62A20FC330000D14CC8 /* YearTableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE3A62920FC330000D14CC8 /* YearTableDataSource.swift */; };
 		4AEB47EE20F93F9E0039FC07 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEB47ED20F93F9E0039FC07 /* APIError.swift */; };
 		4AEB47F020F93FBC0039FC07 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEB47EF20F93FBC0039FC07 /* Result.swift */; };
 		4AEB47F220F93FF30039FC07 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEB47F120F93FF30039FC07 /* APIClient.swift */; };
@@ -41,6 +42,7 @@
 		4AE3A62120FC09EF00D14CC8 /* ProvinceTableDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProvinceTableDataSource.swift; sourceTree = "<group>"; };
 		4AE3A62420FC20AB00D14CC8 /* OrderedDictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderedDictionary.swift; sourceTree = "<group>"; };
 		4AE3A62720FC232F00D14CC8 /* SortedArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortedArray.swift; sourceTree = "<group>"; };
+		4AE3A62920FC330000D14CC8 /* YearTableDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YearTableDataSource.swift; sourceTree = "<group>"; };
 		4AEB47ED20F93F9E0039FC07 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		4AEB47EF20F93FBC0039FC07 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		4AEB47F120F93FF30039FC07 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
@@ -118,17 +120,10 @@
 		4AE3A61F20FC09C600D14CC8 /* Tables */ = {
 			isa = PBXGroup;
 			children = (
-				4AE3A62020FC09DD00D14CC8 /* Provinces */,
+				4AE3A62120FC09EF00D14CC8 /* ProvinceTableDataSource.swift */,
+				4AE3A62920FC330000D14CC8 /* YearTableDataSource.swift */,
 			);
 			path = Tables;
-			sourceTree = "<group>";
-		};
-		4AE3A62020FC09DD00D14CC8 /* Provinces */ = {
-			isa = PBXGroup;
-			children = (
-				4AE3A62120FC09EF00D14CC8 /* ProvinceTableDataSource.swift */,
-			);
-			path = Provinces;
 			sourceTree = "<group>";
 		};
 		4AE3A62320FC209600D14CC8 /* Utils */ = {
@@ -298,6 +293,7 @@
 				4ABE357420F45E3200F3D3EA /* AppDelegate.swift in Sources */,
 				4AEB480D20F96DD00039FC07 /* Customer.swift in Sources */,
 				4AEB47F220F93FF30039FC07 /* APIClient.swift in Sources */,
+				4AE3A62A20FC330000D14CC8 /* YearTableDataSource.swift in Sources */,
 				4AE3A62520FC20AB00D14CC8 /* OrderedDictionary.swift in Sources */,
 				4AEB47FA20F942130039FC07 /* ShopifyClient.swift in Sources */,
 				4AEB480620F969280039FC07 /* Address.swift in Sources */,

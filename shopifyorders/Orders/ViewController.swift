@@ -11,13 +11,22 @@ import UIKit
 class ViewController: UIViewController {
     // MARK: - Interface Builder Outlets
     @IBOutlet weak var updatingLabel: UILabel!
+    @IBOutlet weak var provinceTable: UITableView!
+    @IBOutlet weak var yearTable: UITableView!
     
     // MARK: - Class attributes
     let shopifyClient = ShopifyClient()
-    let downloadedOrders = DownloadedOrders()
+    
+    let provinceDataSource = ProvinceTableDataSource()
+    let yearDataSource = YearTableDataSource()
+    lazy var downloadedOrders: DownloadedOrders = {
+        return DownloadedOrders(provinceTable: provinceTable, provinceDataSource: provinceDataSource, yearTable: yearTable, yearDataSource: yearDataSource)
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.provinceTable.dataSource = provinceDataSource
+        
         updateData()
     }
 }
