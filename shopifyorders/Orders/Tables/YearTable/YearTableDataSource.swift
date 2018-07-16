@@ -41,11 +41,10 @@ extension YearTableDataSource: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let order = yearOrders.elementAt(index: indexPath.section, subindex: indexPath.row) else { return UITableViewCell() }
+        guard let order = yearOrders.elementAt(index: indexPath.section, subindex: indexPath.row),
+            let cell = tableView.dequeueReusableCell(withIdentifier: YearTableDataSource.YearCellIdentifier, for: indexPath) as? YearCell else { return UITableViewCell() }
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: YearTableDataSource.YearCellIdentifier, for: indexPath)
-        cell.textLabel?.text = String(order.id)
-        
+        cell.formatWith(order: order)
         return cell
     }
 }
