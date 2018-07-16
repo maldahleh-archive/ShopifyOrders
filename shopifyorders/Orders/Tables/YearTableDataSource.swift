@@ -21,6 +21,7 @@ class YearTableDataSource: NSObject {
 
 // MARK: - UITableViewDataSource
 extension YearTableDataSource: UITableViewDataSource {
+    // MARK: - Count Methods
     func numberOfSections(in tableView: UITableView) -> Int {
         return yearOrders.totalKeys()
     }
@@ -30,6 +31,11 @@ extension YearTableDataSource: UITableViewDataSource {
         
         let orderCount = ordersForIndex.count
         return orderCount > YearTableDataSource.MaxOrdersDisplayed ? YearTableDataSource.MaxOrdersDisplayed : orderCount
+    }
+    
+    // Mark: - Display Methods
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return String(yearOrders.keyAt(index: section))
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
